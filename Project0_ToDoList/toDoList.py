@@ -10,3 +10,9 @@ import datetime
 # Need to call methods(?)
 
 def main():
+    logging.basicConfig(filename = "To_Do_List.log", leve = logging.DEBUG, format='%(asctime)s :: %(message)s')
+    
+    print("*** TO-DO LIST ***")
+
+    fname = "toDoList.csv"
+    
