@@ -1,0 +1,21 @@
+- PROJECT 1: TO_DO lIST
+
+    - REQUIREMENTS
+        - CLI (Command Line Interface) where users can interact with application while its running
+
+        - Application should read in data from a file and be displayed in some way
+
+        - Application should also write data to file
+
+        - User input must be validated (program shouldnt end with exceptions based on user input)
+
+        - Program must follow OOP design (classes and objects)
+
+        - Must be uploaded to a github repository
+
+
+
+- Step by Step plan (work in progress)
+    1.
+
+    
