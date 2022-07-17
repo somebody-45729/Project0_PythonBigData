@@ -17,7 +17,9 @@
 
 - Step by Step plan (work in progress)
     1. Need to add in a section that lets user know what to do in order to remove or add a new todo
-    2. Implement each portion refered back in #1
+    2. Implement each portion refered back in #
+    3. Does it have apply to a csv file?
+    4. Probably want to refer to the "animal" project we did together
     
 
     
