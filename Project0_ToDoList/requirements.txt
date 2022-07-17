@@ -16,7 +16,8 @@
 
 
 - Step by Step plan (work in progress)
-    1. Set up the inital logic for said user should user start entering values
+    1. Need to add in a section that lets user know what to do in order to remove or add a new todo
+    2. Implement each portion refered back in #1
     
 
     
