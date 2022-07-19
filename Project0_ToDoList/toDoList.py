@@ -22,13 +22,12 @@ def instruct():
     This function will appear first to remind user what the proper inputs are
     '''
 
-def saveEvent():
+def saveEvent(fname, lst_toDo):
     '''
     Have the following saved into a .csv file
 
     returns none . . . ?
     '''
-    with open(fname)
 
 def load_Event(fname) -> list:
     '''
@@ -36,7 +35,8 @@ def load_Event(fname) -> list:
     '''
 
 def insert_Event() -> input:
-    '''
-    Load into selection
-    '''
+    # Prompting user for information
+    # Date - Event - Level of Importance specifically
+    
+    
 
