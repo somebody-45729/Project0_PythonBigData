@@ -31,6 +31,12 @@ def saveEvent():
     with open(fname)
 
 def load_Event(fname) -> list:
-
+    '''
+    Return list of events
+    '''
 
 def insert_Event() -> input:
+    '''
+    Load into selection
+    '''
+
