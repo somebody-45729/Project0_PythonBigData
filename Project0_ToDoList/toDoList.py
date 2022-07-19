@@ -61,10 +61,23 @@ def insert_Event() -> input:
 
     # Then the date associated with above item/event
     print("\nPlease enter the date for the item/event to be remembered by:\n>>>")
+
+    insertDate = input("Date: (in DD/MM/YYYY) ")
+    day, month, year = insertDate.split('/')
+    validDate = True
     while True:
-        dateEvent = input("Date: (in DD/MM/YYYY) ")
-        chosenDate = datetime.datetime.strptime(dateEvent, "%d/%m%Y").date()
-        print(chosenDate.strftime('%d/%B/%Y'))
+        try:
+            datetime.datetime(int(day), int(month), int(year))
+        except ValueError:
+            validDate = False
+        if validDate == False:
+            print("Date input is not valid, please try again")
+        else:
+            print()
+            break
+
+    chosenDate = datetime.datetime.strptime(insertDate, "%d/%m%Y").date()
+    print(chosenDate.strftime('%d/%B/%Y'))
     
     
 
