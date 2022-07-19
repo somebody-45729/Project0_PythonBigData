@@ -21,6 +21,8 @@ def instruct():
     '''
     This function will appear first to remind user what the proper inputs are
     '''
+    print("*** INSTRUCTIONS ON PROPER INPUT ***")
+    print()
 
 def saveEvent(fname, lst_toDo):
     '''
@@ -38,5 +40,6 @@ def insert_Event() -> input:
     # Prompting user for information
     # Date - Event - Level of Importance specifically
     
+    print("*** Entering: TO-DO LIST ***")
     
 
