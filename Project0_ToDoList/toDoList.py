@@ -22,6 +22,7 @@ def instruct():
     This function will appear first to remind user what the proper inputs are
     '''
     print("*** INSTRUCTIONS ON PROPER INPUT ***")
+    print("*** DATES NEED NOT APPLY, AUTO-DETECTED ***")
     print()
 
 def saveEvent(fname, lst_toDo):
@@ -41,5 +42,25 @@ def insert_Event() -> input:
     # Date - Event - Level of Importance specifically
     
     print("*** Entering: TO-DO LIST ***")
+    # Start with the item first
+    print("\nPlease enter the item/event which you wish to save!")
+    while True:
+        try:
+            item = input("\nEnter item/event:\n>>>")
+            check = re.search("", item)
+
+            print(item)
+            print(check)
+            if check == None:
+                raise ValueError
+        except ValueError as ve:
+            print("\nWe're sorry, but please enter an event/item, your response was blank!")
+            logging.error("Empty response, trying again")
+        else:
+            break
+
+    dateItem = input("")
+
+    
     
 
