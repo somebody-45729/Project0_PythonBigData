@@ -59,8 +59,12 @@ def insert_Event() -> input:
         else:
             break
 
-    dateItem = input("")
-
+    # Then the date associated with above item/event
+    print("\nPlease enter the date for the item/event to be remembered by:\n>>>")
+    while True:
+        dateEvent = input("Date: (in DD/MM/YYYY) ")
+        chosenDate = datetime.datetime.strptime(dateEvent, "%d/%m%Y").date()
+        print(chosenDate.strftime('%d/%B/%Y'))
     
     
 
