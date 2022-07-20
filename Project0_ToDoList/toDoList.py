@@ -79,5 +79,8 @@ def insert_Event() -> input:
     chosenDate = datetime.datetime.strptime(insertDate, "%d/%m%Y").date()
     print(chosenDate.strftime('%d/%B/%Y'))
     
+
+    # Lvel of importance (3 Different Priorities: Low, Medium, High)
+    
     
 
