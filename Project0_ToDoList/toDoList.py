@@ -15,11 +15,14 @@ def main():
     print("*** TO-DO LIST ***")
     fname = "toDoList.csv"
     lst_toDo = []
-    lst_toDo = load_Event(fname)
+    lst_toDo = saveEvent(fname)
 
     while True:
         insert = insert_Event()
-        if 
+        if insert == None:
+            break
+        logging.info("New event is now created!")
+        lst_toDo.append(insert)
     
 def instruct():
     '''
@@ -43,16 +46,6 @@ def saveEvent(fname, lst_toDo):
             else:
                 pass
 
-def load_Event(fname) -> list:
-    '''
-    Return list of events
-    '''
-    lst_toDo = []
-
-    with open(fname, "r") as load:
-        for line in load:
-            information = line.split(',')
-            if info[0] == Event
 
 def insert_Event() -> input:
     # Prompting user for information
@@ -93,8 +86,8 @@ def insert_Event() -> input:
             print()
             break
 
-    chosenDate = datetime.datetime.strptime(insertDate, "%d/%m%Y").date()
-    print(chosenDate.strftime('%d/%B/%Y'))
+   # chosenDate = datetime.datetime.strptime(insertDate, "%d/%m%Y").date()
+   # print(chosenDate.strftime('%d/%B/%Y'))
     
 
     # Lvel of importance (3 Different Priorities: Low, Medium, High)

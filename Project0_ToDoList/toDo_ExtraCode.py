@@ -12,3 +12,16 @@ class input():
 class Event(input):
     def run(self):
         print("A New input for the List!")
+
+class LOW(input):
+    def priority(self):
+        print("LOW priority for this case!")
+
+class MEDIUM(input):
+    def priority(self):
+        print("MEIDUM priority for this case!")
+
+class HIGH(input):
+    def priority(self):
+        print("HIGH priority for this case!")
+    
