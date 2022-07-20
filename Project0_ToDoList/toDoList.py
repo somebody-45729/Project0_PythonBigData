@@ -16,6 +16,10 @@ def main():
     fname = "toDoList.csv"
     lst_toDo = []
     lst_toDo = load_Event(fname)
+
+    while True:
+        insert = insert_Event()
+        if 
     
 def instruct():
     '''
@@ -43,6 +47,12 @@ def load_Event(fname) -> list:
     '''
     Return list of events
     '''
+    lst_toDo = []
+
+    with open(fname, "r") as load:
+        for line in load:
+            information = line.split(',')
+            if info[0] == Event
 
 def insert_Event() -> input:
     # Prompting user for information
