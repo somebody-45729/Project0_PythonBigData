@@ -82,5 +82,19 @@ def insert_Event() -> input:
 
     # Lvel of importance (3 Different Priorities: Low, Medium, High)
     
+
+
+    while True:
+        priority = input("\nEnter the level of priority (LOW, MEDIUM, HIGH):\n>>>")
+
+        if priority.upper() == "LOW":
+            print(priority)
+        elif priority.upper() == "MEDIUM":
+            print(priority)
+        elif priority.upper() == "HIGH":
+            print(priority)
+        else:
+            print("Please enter one of the following: LOW MEDIUM or HIGH")
+
     
 
