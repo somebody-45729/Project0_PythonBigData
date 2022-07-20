@@ -10,5 +10,5 @@ class input():
         return "Date: " + self._date + ", Item" + self._event + ", Level of importance: " + self._priority
         
 class Event(input):
-    def run(self)
-    print("A New input for the List!")
+    def run(self):
+        print("A New input for the List!")
