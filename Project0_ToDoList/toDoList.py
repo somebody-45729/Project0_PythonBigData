@@ -8,14 +8,13 @@ import sys
 import datetime
 
 # Need to call methods(?)
-
+'''
 def main():
     logging.basicConfig(filename = "To_Do_List.log", level = logging.DEBUG, format='%(asctime)s :: %(message)s')
     
     print("*** TO-DO LIST ***")
     fname = "toDoList.csv"
     lst_toDo = []
-    lst_toDo = saveEvent(fname)
 
     while True:
         insert = insert_Event()
@@ -25,20 +24,17 @@ def main():
         lst_toDo.append(insert)
     
 def instruct():
-    '''
-    This function will appear first to remind user what the proper inputs are
-    '''
+   # This function will appear first to remind user what the proper inputs are
+   
     print("*** INSTRUCTIONS ON PROPER INPUT ***")
     print("*** PLEASE ENTER DATES IN DD/MM/YYYY FORMAT ***")
     print("*** ALL INPUTS ARE EXCEPTED FOR EVENTS/ITEMS BUT LACK OF INPUT INQURES FOR AN ACTUAL INPUT ***")
     print("*** THE LEVELS OF PRIORITY ARE OF THE FOLLOWING: LOW MEDIUM or HIGH ***")
 
 def saveEvent(fname, lst_toDo):
-    '''
-    Have the following saved into a .csv file
+   # Have the following saved into a .csv file
+   # returns none . . . ?
 
-    returns none . . . ?
-    '''
     with open(fname, "w") as saved:
         for toDo in lst_toDo:
             if type(toDo):
@@ -104,9 +100,9 @@ def insert_Event() -> input:
         else:
             print("Please enter one of the following: LOW MEDIUM or HIGH")
 
-    
+
 if __name__ == "__main__":
     main()
-
+'''
     
 
