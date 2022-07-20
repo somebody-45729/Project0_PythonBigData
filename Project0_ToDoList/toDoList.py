@@ -22,8 +22,9 @@ def instruct():
     This function will appear first to remind user what the proper inputs are
     '''
     print("*** INSTRUCTIONS ON PROPER INPUT ***")
-    print("*** DATES NEED NOT APPLY, AUTO-DETECTED ***")
-    print()
+    print("*** PLEASE ENTER DATES IN DD/MM/YYYY FORMAT ***")
+    print("*** ALL INPUTS ARE EXCEPTED FOR EVENTS/ITEMS BUT LACK OF INPUT INQURES FOR AN ACTUAL INPUT ***")
+    PRINT("*** THE LEVELS OF PRIORITY ARE OF THE FOLLOWING: LOW MEDIUM or HIGH ***")
 
 def saveEvent(fname, lst_toDo):
     '''
@@ -33,7 +34,10 @@ def saveEvent(fname, lst_toDo):
     '''
     with open(fname, "w") as saved:
         for toDo in lst_toDo:
-            if type(toDo) 
+            if type(toDo):
+                saved.write("Date: " + toDo._date + ", Item" + toDo._event + ", Level of importance: " + toDo._priority)
+            else:
+                pass
 
 def load_Event(fname) -> list:
     '''
