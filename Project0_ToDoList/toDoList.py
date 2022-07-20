@@ -31,6 +31,9 @@ def saveEvent(fname, lst_toDo):
 
     returns none . . . ?
     '''
+    with open(fname, "w") as saved:
+        for toDo in lst_toDo:
+            if type(toDo) 
 
 def load_Event(fname) -> list:
     '''
@@ -81,8 +84,6 @@ def insert_Event() -> input:
     
 
     # Lvel of importance (3 Different Priorities: Low, Medium, High)
-    
-
 
     while True:
         priority = input("\nEnter the level of priority (LOW, MEDIUM, HIGH):\n>>>")
@@ -95,6 +96,10 @@ def insert_Event() -> input:
             print(priority)
         else:
             print("Please enter one of the following: LOW MEDIUM or HIGH")
+
+    
+if __name__ == "__main__":
+    main()
 
     
 

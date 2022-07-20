@@ -9,3 +9,6 @@ class input():
     def __str__(self):
         return "Date: " + self._date + ", Item" + self._event + ", Level of importance: " + self._priority
         
+class Event(input):
+    def run(self)
+    print("A New input for the List!")
