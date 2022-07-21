@@ -3,7 +3,6 @@ import logging
 import sys
 import datetime
 
-
 # NEED TO ASK HELP IN SETTING UP CONNECTION WITH .csv file read/write
 
 
@@ -12,8 +11,8 @@ def main():
 
     print("******** TO-DO LIST ********")
     csvName = 'toDoList.csv'
-    userIn = ' '
     complete = 'CONTINUE'
+
 
     # Take into account 
     while complete == 'CONTINUE': 
@@ -26,19 +25,25 @@ def main():
 
         # 3 choices: ADD, DELETE, and QUIT the program altogether
         # ALL THREE METHODS BELOW
-        if userChoice == "ADD TASKS":
+        if userChoice.upper() == "ADD TASKS":
             addTask() 
             userChoice = input("CONTINUE or QUIT?")
-        elif userChoice == "DELETE TASKS":
+        elif userChoice.upper() == "DELETE TASKS":
             deleteTask()
             userChoice = input("CONTINUE or QUIT?")
+        elif userChoice.upper() == "QUIT":
+            print("THANK YOU")
+            break
         else:
             print("HOPE THIS HELPS!")
             break # Assume that user has chosen to quit program
 
     def addTask(): 
        # NEED TO A WAY TO HAVE THE CSV READ AND WRITE WHILE HAPPENING
-        
+       l
+        with open(csvName, "w") as f:
+            for line in f:
+
             # focusing on the due date of task, with the task at hand, and finally the priority of said task
             date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
             day, month, year = map(int, date.split(','))
@@ -72,6 +77,8 @@ def main():
         # need to delete the object here?
         # - - -
 
+    def saveTask():
+        wi
 
 if __name__ == "__main__":
     main()
