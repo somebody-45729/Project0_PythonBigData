@@ -29,6 +29,20 @@ def main():
             print("HOPE THIS HELPS!")
             break # Assume that user has chosen to quit program
 
-    def addTask():
-        
-            
+    def addTask(): 
+            # focusing on the due date of task, with the task at hand, and finally the priority of said task
+            date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
+            day, month, year = map(int, date.split(','))
+            try:
+                dueDate = datetime(day, month, year)
+            except ValueError:
+                print("\n CANNOT EXCEPT STIRNG AS AGE, PLEASE FOLLOW FORMAT AS INDICATED ABOVE!\n")
+                logging.error("Tried to enter string for date, retrying . . .")
+            dueDate = str(dueDate)
+            dueDate = dueDate[:10] # give the proper spacing (DD, MM, YYYY)
+
+            # Actual item: exception hanlding not really needed?
+            item = input("Enter the event/task/item that you wish to list: ")
+
+            priority = input("ENTER LOW, MEDIUM, or HIGH FOR PRIORITY LEVEL OF EVENT/TASK/ITEM: ")
+
