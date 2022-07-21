@@ -20,22 +20,23 @@ def main():
         # Cycle has to continue til user decides to close the program themselves
         while userChoice not in ("ADD TASKS", "DELETE TASKS", "QUIT"):
             userChoice = input("PLEASE SELECT FROM THE FOLLOWING: ADD TASKS, DELETE TASKS, or QUIT PROGRAM")
-            
+
 
 
         # 3 choices: ADD, DELETE, and QUIT the program altogether
         # ALL THREE METHODS BELOW
         if userChoice == "ADD TASKS":
             addTask() 
-            userChoice = input("CONTINUE OPERATIONS or QUIT PROGRAM?")
+            userChoice = input("CONTINUE or QUIT?")
         elif userChoice == "DELETE TASKS":
             deleteTask()
-            userChoice = input("CONTINUE OPERATIONS or QUIT PROGRAM?")
+            userChoice = input("CONTINUE or QUIT?")
         else:
             print("HOPE THIS HELPS!")
             break # Assume that user has chosen to quit program
 
     def addTask(): 
+       # NEED TO A WAY TO HAVE THE CSV READ AND WRITE WHILE HAPPENING
 
             # focusing on the due date of task, with the task at hand, and finally the priority of said task
             date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
@@ -69,3 +70,7 @@ def main():
         deletion = int(deletion)
         # need to delete the object here?
         # - - -
+
+
+if __name__ == "__main__":
+    main()
