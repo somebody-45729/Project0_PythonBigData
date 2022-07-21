@@ -19,7 +19,7 @@ class LOW(input):
 
 class MEDIUM(input):
     def priority(self):
-        print("MEIDUM priority for this case!")
+        print(" priority for this case!")
 
 class HIGH(input):
     def priority(self):
