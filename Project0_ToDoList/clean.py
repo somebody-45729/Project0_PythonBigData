@@ -9,10 +9,10 @@ def main():
     print("******** TO-DO LIST ********")
     csvName = 'toDoList.csv'
     userIn = ' '
-    complete = 'no'
+    complete = 'CONTINUE'
 
     # Take into account 
-    while complete == 'no': 
+    while complete == 'CONTINUE': 
         # Cycle has to continue til user decides to close the program themselves
         while userChoice not in ("ADD TASKS", "DELETE TASKS", "QUIT"):
             userChoice = input("PLEASE SELECT FROM THE FOLLOWING: ADD TASKS, DELETE TASKS, or QUIT PROGRAM")
@@ -45,4 +45,11 @@ def main():
             item = input("Enter the event/task/item that you wish to list: ")
 
             priority = input("ENTER LOW, MEDIUM, or HIGH FOR PRIORITY LEVEL OF EVENT/TASK/ITEM: ")
-
+            if priority.upper == "LOW" or priority.lower == "low":
+                print(priority)
+            elif priority.upper == "MEDIUM" or priority.lower == "medium":
+                print(priority)
+            elif priority.upper == "HIGH" or priority.lower == "high":
+                print(priority)
+            else:
+                print("I'm sorry, please enter one of the following: low, medium, or high for priority choice")
