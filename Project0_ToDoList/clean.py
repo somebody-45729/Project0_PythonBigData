@@ -13,15 +13,11 @@ def main():
     csvName = 'toDoList.csv'
     complete = 'CONTINUE'
 
-
     # Take into account 
     while complete == 'CONTINUE': 
-        inToDo = addTask
         # Cycle has to continue til user decides to close the program themselves
         while userChoice not in ("ADD TASKS", "DELETE TASKS", "QUIT"):
             userChoice = input("PLEASE SELECT FROM THE FOLLOWING: ADD TASKS, DELETE TASKS, or QUIT PROGRAM")
-
-
 
         # 3 choices: ADD, DELETE, and QUIT the program altogether
         # ALL THREE METHODS BELOW
@@ -40,45 +36,38 @@ def main():
 
     def addTask(): 
        # NEED TO A WAY TO HAVE THE CSV READ AND WRITE WHILE HAPPENING
-       l
-        with open(csvName, "w") as f:
-            for line in f:
-
             # focusing on the due date of task, with the task at hand, and finally the priority of said task
-            date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
-            day, month, year = map(int, date.split(','))
-            try:
+        date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
+        day, month, year = map(int, date.split(','))
+        try:
                 dueDate = datetime(day, month, year)
-            except ValueError:
+        except ValueError:
                 print("\n CANNOT EXCEPT STIRNG AS AGE, PLEASE FOLLOW FORMAT AS INDICATED ABOVE!\n")
                 logging.error("Tried to enter string for date, retrying . . .")
-            dueDate = str(dueDate)
-            dueDate = dueDate[:10] # give the proper spacing (DD,MM,YYYY)
+        dueDate = str(dueDate)
+        dueDate = dueDate[:10] # give the proper spacing (DD,MM,YYYY)
 
-            # Actual item: exception hanlding not really needed?
-            item = input("Enter the event/task/item that you wish to list: ")
+        # Actual item: exception hanlding not really needed?
+        item = input("Enter the event/task/item that you wish to list: ")
 
-            # Setting up actual priority levels
-            priority = input("ENTER LOW, MEDIUM, or HIGH FOR PRIORITY LEVEL OF EVENT/TASK/ITEM: ")
+        # Setting up actual priority levels
+        priority = input("ENTER LOW, MEDIUM, or HIGH FOR PRIORITY LEVEL OF EVENT/TASK/ITEM: ")
 
-            if priority.upper == "LOW" or priority.lower == "low":
+        if priority.upper == "LOW" or priority.lower == "low":
                 print(priority)
-            elif priority.upper == "MEDIUM" or priority.lower == "medium":
+        elif priority.upper == "MEDIUM" or priority.lower == "medium":
                 print(priority)
-            elif priority.upper == "HIGH" or priority.lower == "high":
+        elif priority.upper == "HIGH" or priority.lower == "high":
                 print(priority)
-            else:
+        else:
                 print("I'm sorry, please enter one of the following: low, medium, or high for priority choice")
 
             
-     def deleteTask():
-        deletion = input("Provie the index number in list to delete the associated item: ")
-        deletion = int(deletion)
-        # need to delete the object here?
-        # - - -
-
-    def saveTask():
-        wi
+        def deleteTask():
+            deletion = input("Provie the index number in list to delete the associated item: ")
+            deletion = int(deletion)
+            # need to delete the object here?
+         # - - -
 
 if __name__ == "__main__":
     main()
