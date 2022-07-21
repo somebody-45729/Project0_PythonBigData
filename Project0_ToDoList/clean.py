@@ -17,6 +17,7 @@ def main():
 
     # Take into account 
     while complete == 'CONTINUE': 
+        inToDo = addTask
         # Cycle has to continue til user decides to close the program themselves
         while userChoice not in ("ADD TASKS", "DELETE TASKS", "QUIT"):
             userChoice = input("PLEASE SELECT FROM THE FOLLOWING: ADD TASKS, DELETE TASKS, or QUIT PROGRAM")
@@ -37,7 +38,7 @@ def main():
 
     def addTask(): 
        # NEED TO A WAY TO HAVE THE CSV READ AND WRITE WHILE HAPPENING
-
+        
             # focusing on the due date of task, with the task at hand, and finally the priority of said task
             date = input('Enter date which the task/event needs to be done: (ex: 11, 07, 2002)')
             day, month, year = map(int, date.split(','))
