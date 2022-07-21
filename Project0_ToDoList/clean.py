@@ -48,7 +48,7 @@ def main():
         dueDate = dueDate[:10] # give the proper spacing (DD,MM,YYYY)
 
         # Actual item: exception hanlding not really needed?
-        item = input("Enter the event/task/item that you wish to list: ")
+        chosenTask = input("Enter the event/task/item that you wish to list: ")
 
         # Setting up actual priority levels
         priority = input("ENTER LOW, MEDIUM, or HIGH FOR PRIORITY LEVEL OF EVENT/TASK/ITEM: ")
@@ -60,14 +60,15 @@ def main():
         elif priority.upper == "HIGH" or priority.lower == "high":
                 print(priority)
         else:
-                print("I'm sorry, please enter one of the following: low, medium, or high for priority choice")
+            print("I'm sorry, please enter one of the following: low, medium, or high for priority choice")
 
-            
-        def deleteTask():
-            deletion = input("Provie the index number in list to delete the associated item: ")
-            deletion = int(deletion)
-            # need to delete the object here?
-         # - - -
+        toDoList = toDoList.append(("Due Date: " + dueDate, "Task: " + chosenTask, + "Priority: " + priority))
+
+    def deleteTask():
+        # deletion process
+        # also read
+        
+
 
 if __name__ == "__main__":
     main()
