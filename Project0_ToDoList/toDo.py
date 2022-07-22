@@ -115,8 +115,13 @@ def insert_Task() -> toDo_Task:
 
     while True:
         # Now priorties: LOW, MEDIUM, or HIGH
-        try:
-            priority = input("")
+        priority = input("\nIS THE PRIORITY OF EVENT/TASK LOW, MEDIUM, or HIGH:\n>>>")
+        if priority.lower() != "low" or "medium" or "high":
+            raise Exception("USER DID NOT ENTER high, medium, or low as input!")
+        else:
+            continue
+
+
 
             
         
