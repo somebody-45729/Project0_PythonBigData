@@ -1,7 +1,7 @@
 import re
 import logging
 import sys
-import datetime
+from datetime import datetime
 import csv
 
 from toDo_ExtraCode import toDo_Task, userEntry
@@ -74,4 +74,48 @@ def insert_Task() -> toDo_Task:
     (TASK can be whatever, but date needs the datetime standard, and priority only limited to high, medium, or low choices)
     '''
 
-    print()
+    print("\nPlease select your entry for your to-do list:")
+    print("\t1) userEntry")
+    print("\t2 exit")
+    userInput = input(">>>> ")
+
+    if userInput not in ["1"]:
+        return None
+
+    while True:
+        # Enter the name of the task/event
+        try:
+            event = input("\nEnter the task/event:\n>>>>")
+            check = re.search(',', event)
+
+            if check != None:
+                raise ValueError
+        except ValueError as ve:
+            print("\nPLEASE AVOID COMMAS FOR SET EVENTS/TASKS:\n")
+            logging.error("trying again")
+        else:
+            break
+
+    while True:
+        # Enter the date relevant to the task/event
+        try:
+            month = int(input("ENTER MONTH OF EVENT/TASK IN NUMERIC FORM"))
+            day = int(input("ENTER DAY OF EVENT/TASK IN NUMERIC FORM"))
+            year = int(input("ENTER YEAR OF EVENT/TASK IN NUMERIC FORM"))
+            date = datetime.date(month, day, year)
+            check = re.search("[a-zA-Z].+ ',' ", date)
+            check
+
+            if check != None:
+                raise ValueError
+        except ValueError as ve:
+            print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN")
+
+        break
+
+    while True:
+
+            
+        
+       
+
