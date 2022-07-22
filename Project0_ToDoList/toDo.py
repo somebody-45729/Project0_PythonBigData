@@ -99,12 +99,11 @@ def insert_Task() -> toDo_Task:
     while True:
         # Enter the date relevant to the task/event
         try:
-            month = int(input("ENTER MONTH OF EVENT/TASK IN NUMERIC FORM"))
-            day = int(input("ENTER DAY OF EVENT/TASK IN NUMERIC FORM"))
-            year = int(input("ENTER YEAR OF EVENT/TASK IN NUMERIC FORM"))
+            month = int(input("\nENTER MONTH OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
+            day = int(input("\nENTER DAY OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
+            year = int(input("\nENTER YEAR OF EVENT/TASK IN NUMERIC FORM:\n>>>"))
             date = datetime.date(month, day, year)
             check = re.search("[a-zA-Z].+ ',' ", date)
-            check
 
             if check != None:
                 raise ValueError
@@ -115,6 +114,9 @@ def insert_Task() -> toDo_Task:
             break
 
     while True:
+        # Now priorties: LOW, MEDIUM, or HIGH
+        try:
+            priority = input("")
 
             
         
