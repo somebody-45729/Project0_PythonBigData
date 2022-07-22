@@ -119,7 +119,19 @@ def insert_Task() -> toDo_Task:
         if priority.lower() != "low" or "medium" or "high":
             raise Exception("USER DID NOT ENTER high, medium, or low as input!")
         else:
-            continue
+            break
+
+    
+    if userInput == "1":
+        toDo = userEntry(event, date, priority)
+    else:
+        toDo = None
+
+    return toDo
+
+
+if __name__ == "__main__":
+    main()
 
 
 
