@@ -109,9 +109,10 @@ def insert_Task() -> toDo_Task:
             if check != None:
                 raise ValueError
         except ValueError as ve:
-            print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN")
-
-        break
+            print("\nNOT A PROPER INTEGER, PLEASE TRY AGAIN:\n")
+            logging.error("Either entered a string character or a comma. Trying again....")
+        else:
+            break
 
     while True:
 
