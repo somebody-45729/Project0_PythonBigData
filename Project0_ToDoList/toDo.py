@@ -4,7 +4,7 @@ import sys
 import datetime
 import csv
 
-from toDo_ExtraCode import toDo_Task, user
+from toDo_ExtraCode import toDo_Task, userEntry
 
 # NEED TO ASK HELP IN SETTING UP CONNECTION WITH .csv file read/write
 
@@ -41,7 +41,7 @@ def save_Task(csvName, lst_toDo):
     '''
     with open(csvName, "w") as f:
         for toDo in lst_toDo:
-            if type(toDo) == user:
+            if type(toDo) == userEntry:
                 f.write("Task, " + toDo._task + "," + str(toDo._date) + "," + toDo._priority + ",\n")
             else:
                 pass
@@ -57,7 +57,7 @@ def load_Task(csvName):
         for row in f:
             infoLine = row.split(',')
             if infoLine[0] == "user":
-                toDo = user(infoLine[1], infoLine[2], infoLine[3])
+                toDo = userEntry(infoLine[1], infoLine[2], infoLine[3])
             else:
                 toDo = None
 
@@ -66,4 +66,12 @@ def load_Task(csvName):
     return lst_toDo
 
 def insert_Task() -> toDo_Task:
-    
+    '''
+    ACTUALLY PROMPTING USER FOR INFO;
+
+    Need the following: TASK -- DATE -- PRIORITY
+
+    (TASK can be whatever, but date needs the datetime standard, and priority only limited to high, medium, or low choices)
+    '''
+
+    print()

@@ -6,7 +6,7 @@ class toDo_Task():
         self._date = str(date)
         self._priority = str(priority)
 
-class user(toDo_Task):
+class userEntry(toDo_Task):
     def chosenTask(self):
         print("***Task is Chosen***")
     
